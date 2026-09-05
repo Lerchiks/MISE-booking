@@ -1,0 +1,12 @@
+.link {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid var(--gray);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+  padding: 5px 20px;
+}
+
+.link:hover {
+  border: 1px solid var(--orange);
+}

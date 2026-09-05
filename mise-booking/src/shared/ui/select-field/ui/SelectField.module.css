@@ -1,0 +1,62 @@
+:root {
+  --padding-w: 10px;
+}
+
+.content {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--padding-w);
+}
+
+.select {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.selected-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 80px;
+  border: 1px solid var(--gray);
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.content > .selected-label:active,
+.content > .selected-label:hover {
+  border-color: var(--orange);
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  z-index: 1;
+  transform: translateY(45%);
+  right: var(--padding-w);
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  font-size: var(--error-font-size);
+  color: var(--error-color);
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  min-height: 20px;
+}
+
+.error.visible {
+  visibility: visible;
+  opacity: 1;
+}

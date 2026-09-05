@@ -1,0 +1,36 @@
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  position: absolute;
+  background-color: white;
+  padding: 0px 5px;
+  top: -8px;
+  left: 10px;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  font-size: var(--error-font-size);
+  color: var(--error-color);
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+
+  min-height: 20px;
+}
+
+.error.visible {
+  visibility: visible;
+  opacity: 1;
+}
