@@ -26,6 +26,11 @@ export function validatePhone(phone: string): string | undefined {
   if (!/^[+\d\s()-]+$/.test(phone)) {
     return 'Введите корректный номер телефона';
   }
+
+  if (!phone.startsWith('8') && !phone.startsWith('7') && !phone.startsWith('+')) {
+    return 'Номер телефона должен начинаться с 7 или с 8.';
+  }
+
   if (phone.replace(/\D/g, '').length < 10) {
     return 'Номер телефона слишком короткий';
   }

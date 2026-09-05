@@ -4,7 +4,7 @@ import { FormField } from '@/shared/ui/form-field/ui/FormField';
 import { BookingFormData } from '@/shared/types/common';
 import { useState } from 'react';
 import type { BookingFormError } from '@/shared/types/common';
-import { validateBookingForm } from '../util/validation';
+import { validateBookingForm } from '@/shared/lib/validation';
 import { SubmitButton } from '@/shared/ui/submit-button';
 import { useRouter } from 'next/navigation';
 import { SpinLoader } from '@/shared/ui/spin';
@@ -12,10 +12,20 @@ import { SelectField } from '@/shared/ui/select-field/ui';
 import style from './BookingForm.module.css';
 
 export function BookingForm() {
+  const getToday = () => {
+    const today = new Date();
+
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const year = today.getFullYear();
+
+    return `${day}.${month}.${year}`;
+  };
+
   const [values, setValues] = useState<BookingFormData>({
     name: '',
     phone: '',
-    date: '',
+    date: getToday(),
     time: '12:00',
     guests: 1,
     status: 'idle',
