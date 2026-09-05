@@ -1,5 +1,5 @@
-import { BookingFormData } from '../model/types';
-import type { BookingFormError } from '../model/types';
+import { BookingFormData } from '@/shared/types/common';
+import type { BookingFormError } from '@/shared/types/common';
 
 export function validateBookingForm(values: BookingFormData): BookingFormError {
   return {
