@@ -32,6 +32,8 @@ body {
   line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+
+  font-family: var(--font-geist-sans);
 }
 
 /* 6. Improve media defaults */
