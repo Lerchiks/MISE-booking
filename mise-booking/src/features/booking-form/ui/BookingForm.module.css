@@ -5,6 +5,12 @@
   background-color: #ffffff;
   border-radius: 20px;
   padding: 10px 15px;
+  box-sizing: border-box;
+
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
 }
 
 .submit {
